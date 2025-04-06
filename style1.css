@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+}
+.logo {
+    height: 180px;
+}
+.lang {
+    color: white;
+    height: 32px;
+    width: 122.4px;
+    background-color: rgb(24, 23, 23);
+    border-radius: 0.25rem;
+    border: none;
+    text-align: center;
+}
+.sign {
+    font-size: 1rem;
+    color: white;
+    height: 32px;
+    width: 75.99px;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: rgb(35, 67, 207);
+}
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 30vh;
+    z-index: 1;
+}
+.center {
+    color: rgb(255, 255, 255);
+    font-size: 37px;
+    font-family: sans-serif;
+    font-weight: 100px;
+    animation: fadeIn 5s ease-in-out forwards;
+}
+p {
+    color: white;
+    font-size: 20px;
+}
+.get {
+    font-size: 1.4rem;
+    color: rgb(49, 156, 151);
+    height: 55px;
+    width: 200px;
+    border-radius: 0.29rem;
+    background-color: rgb(8, 7, 7);
+    margin-top: 15px;
+    align-items: center;
+    animation: fadeIn 5s ease-in-out forwards;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.get:hover {
+    border: 2px solid white
+}
+.features {
+    z-index: 1;
+    position: relative;
+    color: white;
+    margin-top: 20px;
+}
+.text1 {
+    position: relative;
+}
+
+.new-logo {
+    align-items: center;
+    position: relative;
+    height: 500px;
+    left: 515px;
+    bottom: 150px;
+    width: 500px;
+    animation: fadeIn 5s ease-in-out forwards; /* Adjust duration and easing as needed */
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1; /* Change to 1 instead of 10 */
+    }
+}
+a { 
+    color: rgb(49, 156, 151);
+}
+footer {
+    position: relative; /* or absolute */
+    width: 100%;
+    background:solid transparent;
+    color: white;
+    text-align: center;
+}
+.details {
+    border-top: solid 0.1px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    padding-right: 90px;
+}
+
+.mid{
+    border-top: solid 0.1px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    padding-right: 90px;
+    height: 100vh;
+    width: 100%;
+    padding: 5%;
+    cursor: pointer;
+}
+.footer {
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust alignment */
+    border-top: solid 0.1px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    padding-right: 90px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust alignment */
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+}
+
+.footer-links .column {
+    flex-basis: calc(25% - 10px); /* Four columns with a small gap */
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.footer-links .column li {
+    margin-bottom: 5px;
+}
+
+.footer-links .column li a {
+    color: white;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-links .column {
+        flex-basis: 50%; /* Two columns on smaller screens */
+    }
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./Gotham-Font/Gotham-Font/Gotham-Bold.otf') format('otf'),
+         url('./Gotham-Font/Gotham-Font/GothamBold.ttf') format('ttf');
+    /* Add additional font file formats if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+.email-signup {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.email-signup {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.email-signup h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.email input {
+    height: 40px;
+    width: 300px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #e50914; /* Red outline */
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+}
+
+.email input::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+.email button {
+    height: 40px;
+    padding: 5px 20px;
+    font-size: 16px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.language-select {
+    margin-top: 20px;
+
+}
+
+.language {
+    font-size: 16px;
+    padding: 7px 10px;
+    color: whitesmoke;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.language option[value="English"] {
+    background-image: none;
+    padding-left: 10px;
+}
+a{ 
+    color: rgb(49, 156, 151);
+   }
+
+ .about{
+    font-size: 1.4rem;
+    color: rgb(49, 156, 151);
+    height: 40px;
+    width: 100px;
+    border:2px solid transparent;
+    border-radius: 0.29rem;
+    background-color: rgb(14,16,16);
+    margin-left: 62%;
+    cursor: pointer;
+ }
+ .about:hover {
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.Contact{
+    font-size: 1.4rem;
+    color: rgb(49, 156, 151);
+    height: 40px;
+    width: 190px;
+    border:2px solid transparent;
+    border-radius: 0.29rem;
+    background-color: rgb(14,16,16);
+    cursor: pointer;
+
+ }
+ .Contact:hover {
+    border: 2px solid white;
+    cursor: pointer;
+}
+.abt{
+    text-align: center;
+    height: 20vh;
+    font-size: 40px;
+    cursor: pointer;
+}
+.icon
+{
+    padding-top: 4%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.insta.facebook
+.x
+{
+    padding: 50%;
+    margin-left: 100px;
+}
+.end
+{
+    display: flex;
+    margin-left: 00px;
+}

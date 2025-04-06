@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Logic Visualizer</title>
+    <link rel="stylesheet" href="./style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.63.3/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.63.3/lib/codemirror.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/monokai.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.3.0/dist/d3.min.js"></script>
+    <link rel="stylesheet" data-name="vs/editor/editor.main" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.36.1/min/vs/editor/editor.main.css">
+</head>
+
+<body>
+    <video autoplay loop muted playsinline class="backgroundVideo">
+        <source src="./Utils/CLV BACGROUND VIDEO NEW.mp4" type="video/mp4">
+    </video>
+    <header>
+        <div class="header-container">
+              <a href="./Main.html"><img src="./Utils/OLD LOGO.png" id="oldlogo"></a>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./index.html#about">ABOUT</a></li>
+                    <li><a href="./index.html#footer">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="editor-container"> 
+            <div class="code-editor">
+                <p>Code Editor</p>
+                <div class="editor-controls">
+                    <select id="language-select" name="language">
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="java">Java</option>  
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                    </select>
+                    <button id="run-code">Run</button>
+                </div>
+                <div id="monacoEditor" class="monaco-editor"></div>
+            </div>
+            <div class="output_terminal">
+                <p>Output Terminal</p><br/><br/>
+                <div id="output-terminal"></div>
+            </div>
+
+            <div class="visualization">
+                <p>Visualization</p><br/>
+                <div id="visualizationArea">
+                    <video id="generated-video" controls height="1280" width="720">
+                        <source src="./Utils/CLV BACGROUND VIDEO NEW.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.36.1/min/vs/loader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.backgroundVideo {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.92;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.code-editor,
+.output_terminal {
+    background-color: black;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+}
+
+.code-editor {
+    flex: 1;
+    margin-right: 20px;
+    min-width: 300px;
+}
+.code-editor p{
+    color: #ffffff;
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+}
+
+@keyframes gradientRotate {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 100% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .editor-container {
+      align-items: flex-start;
+      background: radial-gradient(circle at top left, #d4e2e2, #0ecdd7);                       
+      border: 2px solid #b1b1b1;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px auto;
+      padding: 20px;
+      width: 80%;
+      background-size: 200% 200%; /* Ensures the gradient covers the entire element */
+      animation: gradientRotate 8s linear infinite; /* Circular movement animation */
+  }
+  
+
+.editor-controls {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.editor-controls button,
+.editor-controls select {
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+header {
+    align-items: center;
+    background: linear-gradient(to right, #006680, #27d3da);
+    height: 100px;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px; /* Padding around the header */
+    position: relative;
+}
+
+.header-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between; /* Distributes space between logo and navigation */
+    position: relative;
+}
+
+#oldlogo {
+    bottom: 5vh;
+    height: 160px;
+    position: relative;
+    width: 200px;
+}
+
+/* #monacoeditor{
+    background: #2e2e2e;
+    border-radius: 5px;
+    height: 421px;
+    overflow-y: auto;   
+} */
+#output-terminal,#monacoEditor {
+    background: #2e2e2e;
+    border-radius: 5px;
+    height: 421px;
+    overflow-y: auto;
+}
+
+#run-code {
+    background-color: #006680;
+    color: white;
+    cursor: pointer;
+}
+ 
+#videopanel {
+    border-radius: 5px;
+    object-fit: cover;
+}
+.visualization #visualizationArea {
+    align-items: center;
+    background: #000000;
+    border-radius: 5px;
+    height: 66vh;
+    justify-content: center;
+    padding: 40px 10px 20px 10px;
+}
+
+.visualization #generated-video {
+    border-radius: 10px;
+    width: 100%;
+    max-height: 60vh;
+}
+
+
+/* .monaco-editor {
+    background: #2e2e2e;
+    border-radius: 5px;
+    height: 400px;
+    overflow: hidden;
+    padding: 0px;
+    width: 100%;
+    /* overflow: scroll; 
+} */
+
+nav a:hover {
+    color: #ffffff; /* Change color on hover */
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+nav li {
+    margin-left: 30px; /* Space between navigation items(Home,about,contactus) */
+}
+
+nav ul {
+    background: transparent; /* Temporary background to see if items are there */
+    bottom: 40px;
+    display: flex; /* Aligns list items horizontally */
+    list-style: none;
+    margin: 0;
+    margin-right: 16px;
+    padding: 0;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.output_terminal {
+    flex: 1;
+    margin-left: 20px;
+    min-width: 300px;
+}
+
+.output_terminal p{
+    color: #ffffff;
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+}
+
+ .visualization {
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    position: relative;
+    right: 38.5px;
+    margin-left: 20px;  
+    min-width: 300px;
+}
+
+.visualization p {
+    color: #ffffff;
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+    left: 112px;
+    margin-block-end: 1em;
+    margin-block-start: 1em;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    position: relative;
+    unicode-bidi: isolate;
+    bottom: 210px;
+}
+
+/* Remove Testimonials Section */
+/* .testimonials-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.testimonial {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background-color: #444;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.testimonial span {
+    font-size: 1rem;
+    color: #aaa;
+} */
